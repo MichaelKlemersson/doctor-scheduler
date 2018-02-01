@@ -13,7 +13,7 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(DoctorScheduler\User::class, function (Faker $faker) {
+$factory->define(DoctorScheduler\Domains\Users\User::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
