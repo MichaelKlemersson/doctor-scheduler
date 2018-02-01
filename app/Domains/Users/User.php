@@ -4,10 +4,11 @@ namespace DoctorScheduler\Domains\Users;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Artesaos\Defender\Traits\HasDefender;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, HasDefender;
 
     /**
      * The attributes that are mass assignable.

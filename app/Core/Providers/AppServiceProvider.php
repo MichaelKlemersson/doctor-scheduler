@@ -31,15 +31,16 @@ class AppServiceProvider extends ServiceProvider
         }
 
         $this->app->register(UnitsServiceProvider::class);
+        // $this->app->register(\Artesaos\Defender\Providers\DefenderServiceProvider::class);
     }
 
     public function registerDevServiceProviders()
     {
-
+        $this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
+        $this->app->alias('Debugbar', \Barryvdh\Debugbar\Facade::class);
     }
 
     public function registerProdServiceProviders()
     {
-        
     }
 }
